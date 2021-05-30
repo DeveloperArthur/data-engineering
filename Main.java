@@ -1,32 +1,27 @@
 package teste;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-    	List<String> todasAsLocacoes = getList();
-    	
-		List<String> todasAsLocacoesSemRepetir = todasAsLocacoes.stream()
-				.distinct()
-				.collect(Collectors.toList());
-		
-		todasAsLocacoesSemRepetir.forEach(locacao -> {
-			int contagemDaLocacao = todasAsLocacoes.stream()
-					.filter(s -> s.equals(locacao))
-					.collect(Collectors.toList())
-					.size();
-			
-			System.out.println(contagemDaLocacao+"; "+locacao);
-		});
+        List<String> todasAsLocacoes = getList();
+
+        List<String> todasAsLocacoesSemRepetir = todasAsLocacoes.stream()
+                .distinct()
+                .collect(Collectors.toList());
+
+        todasAsLocacoesSemRepetir.forEach(locacao -> {
+            int contagemDaLocacao = todasAsLocacoes.stream()
+                    .filter(s -> s.equals(locacao))
+                    .collect(Collectors.toList())
+                    .size();
+
+            System.out.println(contagemDaLocacao + "; " + locacao);
+        });
     }
-	
+
     public static List<String> getList() {
         List<String> todasAsLocacoes = Arrays.asList("A DISPOSICAO DE ORGAOS ESTRANHOS AO GDF COM ONUS",
                 "APOSENTADOS",
