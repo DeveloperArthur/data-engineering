@@ -3,7 +3,7 @@
 Atividade: Utilizando o arquivo em anexo (professores.csv), crie as tabelas no hive e execute a seguinte consulta SQL:
 
 
-- total de professores por lotação
+total de professores por lotação
 
 
 Conteúdo do arquivo:
